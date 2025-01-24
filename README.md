@@ -336,10 +336,32 @@ Try uploading a text file and asking some questions!
 Upload a PDF file of the recent DeepSeek-R1 paper and ask the following questions:
 
 1. What is RL and how does it help reasoning?
+
+*Model Response*:
+
+RL stands for Reinforcement Learning, which is a machine learning framework in which an agent learns to make decisions by taking actions in an environment to maximize cumulative rewards. In the context of reasoning capabilities for language models (LLMs), RL helps by allowing the model to explore different reasoning patterns and develop complex problem-solving skills without relying on supervised data.
+
+Through pure RL, models like DeepSeek-R1-Zero can learn to engage in reasoning behaviors such as self-verification, reflection, and generating long chains of thought (CoT). This incentivization of reasoning capabilities through RL marks a significant advancement for LLMs, paving the way for improved reasoning performance on various tasks.
+
+
 2. What is the difference between DeepSeek-R1 and DeepSeek-R1-Zero?
+
+*Model Response*
+
+The main difference between DeepSeek-R1 and DeepSeek-R1-Zero is their approach to training and performance capabilities. DeepSeek-R1-Zero is designed with a straightforward template that emphasizes a reasoning process followed by the final answer, and it progresses through reinforcement learning (RL) directly from the base model, closely monitoring its evolution without the influence of supervised fine-tuning.
+
+In contrast, DeepSeek-R1 has certain limitations compared to DeepSeek-R1-Zero, such as falling short in tasks like function calling, multi-turn interactions, complex role-playing, and JSON output. Moreover, DeepSeek-R1 is optimized for Chinese and English, which can lead to language mixing issues when handling queries in other languages.
+
+Additionally, DeepSeek-R1 exhibits sensitivity to prompts, particularly with few-shot prompting, which degrades its performance, while it performs better with zero-shot settings. Overall, DeepSeek-R1-Zero shows a strong foundational capability with a notable performance improvement during the RL training, surpassing DeepSeek-R1 in certain benchmarks and tasks.
+
 3. What is this paper about?
 
+*Model response*
+I don't know the answer.
+
 Does this application pass your vibe check? Are there any immediate pitfalls you're noticing?
+
+*The main pitfall is answering broad questions. Since only the most similar chunks are returned, it lacks the ability to understand the broad context that would require passing more data during the generation step. Otherwise, for detailed responses, the responses passed the vibe check.*
 
 ## 🚧 CHALLENGE MODE 🚧
 
